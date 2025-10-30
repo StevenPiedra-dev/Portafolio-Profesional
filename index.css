@@ -52,7 +52,7 @@
   justify-content: space-between; /* Separa el logo a la izquierda y los links a la derecha */
   align-items: center;
   background-color: lightblue;
-  padding: 10px 0px;
+  padding: 10px 10px;
   color: #0e1320;
   position: relative; /* Permite posicionar elementos internos */
 }
