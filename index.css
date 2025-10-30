@@ -37,7 +37,7 @@
     color: white;
 }
 
-/* Todo el body */
+/* Elimina todos los margenes y paddings por defecto del body */
 * {
   margin: 0;
   padding: 0;
@@ -47,20 +47,20 @@
 
 /* Para el navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Coloca los elementos del navbar en fila */
+  justify-content: space-between; /* Separa el logo a la izquierda y los links a la derecha */
   align-items: center;
   background-color: lightblue;
   padding: 10px 20px;
   color: #0e1320;
-  position: relative;
+  position: relative; /* Permite posicionar elemntos internos */
 }
 
 /* Estilos de la nav bar */
 .nav-links {
-  list-style: none;
+  list-style: none; /* Elimina los puntos de la lista */
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Espacio entre los links */
 }
 
 /* Estilos de la hamburguesa */
@@ -71,6 +71,7 @@
   transition: background 0.3s;
 }
 
+/* Hover del menù */
 .nav-links li a:hover,
 .nav-links li a.active {
   background-color: #0e1320;
@@ -115,7 +116,10 @@
   .menu-toggle {
     display: flex;
   }
-
+  /* Cuando el ancho de pantalla es menor o igual a 768px
+  Muestra el icono hamburguesa display: flex;
+  Esconde el menu display none;
+  cuando el JS activa .active, el menu se muestra en columna*/
   .nav-links {
     position: absolute;
     top: 60px;
