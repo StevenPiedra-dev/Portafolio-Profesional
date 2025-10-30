@@ -1,0 +1,139 @@
+/* Header y texto */
+.header {
+    background-color: #0e1320;
+    color: lightblue;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "poppins", sans-serif;
+}
+
+.header h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-bottom: 10;
+    font-style: italic;
+}
+
+/* Links de redes header */
+.social-links {
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 15px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: lightblue;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+/* Todo el body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px 20px;
+  color: #0e1320;
+  position: relative;
+}
+
+/* Estilos de la nav bar */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilos de la hamburguesa */
+.nav-links li a {
+  color: #0e1320;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #0e1320;
+  color: lightblue;
+  border-radius: 5px;
+}
+
+/* Login button */
+.login-button {
+  background-color:#0e1320;
+  border: none;
+  color: lightblue;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+.login-button:hover {
+  background-color: #0e1380;
+  color: lightblue;
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* Estilos de las lineas de la hamburguesa */
+.menu-toggle span {
+  background: #0e1320;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: lightblue;
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    display: none;
+    z-index: 10; 
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}

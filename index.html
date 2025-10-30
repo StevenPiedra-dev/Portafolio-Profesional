@@ -10,24 +10,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Cambiar el titulo de la pestaña-->
     <title>Portfolio-StevenPiedra</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 </head>
 
 <body>
+    <!--Header-->
+    <div class="header">
+        <h3>Steven Piedra Villalta</h3>
+        <p>Full-stack Developer | Data Analyst | AI Developer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/stevenpiedra" target="_blank">
+                <i class="bi bi-linkedin"></i>
+                Wanna see my linkedIn?
+            </a><br />
+            <a href="https://github.com/StevenPiedra-dev" target="_blank">
+                <i class="bi bi-github"></i>
+                Wanna see my GitHub?
+            </a><br />
+            <a href="mailto:steven.piedra02@gmail.com">
+                <i class="bi bi-envelope"></i>
+                Wanna Email me?
+            </a><br />
+        </div>
+    </div>
+
+    <!--TopNav-->
+    <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="pages/AboutMe/AboutMe.html">About Me</a></li>
+            <li><a href="#">This portfolio</a></li>
+            <li><a href="#">My projects</a></li>
+            <li><a href="#">Contact me</a></li>
+        </ul>
+
+        <button class="login-button" onclick="location.href='Login/login.html'">Login</button>
+
+        <!--Icono de hamburguesa-->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
     <h1>AQUI VA EL INDEX USER</h1>
-    <a href="pages/AboutMe/AboutMe.html">About me</a><br />
-    <a href="">How was built this project</a><br />
-    <a href="">My projects</a><br />
-    <a href="">Contact Me</a><br />
-    <br />
+       <br />
     <hr />
-    <h1>AQUI VA EL INDEX ADMIN</h1>
-    <a href="">Login</a><br />
-    <a href="">This project</a><br />
-    <a href="">Contact me</a> <br />
-    <br />
     <hr />
     <h1>Errores</h1> 
     <a href="">Error 404</a>
+    <script src="index.js"></script>
 </body>
 
 </html>
