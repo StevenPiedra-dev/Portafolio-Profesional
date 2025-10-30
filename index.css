@@ -16,6 +16,7 @@
 .header p {
     font-size: 1.2rem;
     margin-bottom: 10;
+    color: white;
     font-style: italic;
 }
 
@@ -51,16 +52,17 @@
   justify-content: space-between; /* Separa el logo a la izquierda y los links a la derecha */
   align-items: center;
   background-color: lightblue;
-  padding: 10px 20px;
+  padding: 10px 0px;
   color: #0e1320;
-  position: relative; /* Permite posicionar elemntos internos */
+  position: relative; /* Permite posicionar elementos internos */
 }
 
 /* Estilos de la nav bar */
 .nav-links {
   list-style: none; /* Elimina los puntos de la lista */
   display: flex;
-  gap: 20px; /* Espacio entre los links */
+  text-align: center;
+  gap: 2px; /* Espacio entre los links */
 }
 
 /* Estilos de la hamburguesa */
@@ -100,7 +102,7 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 4px;
 }
 
 /* Estilos de las lineas de la hamburguesa */
