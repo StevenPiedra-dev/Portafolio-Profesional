@@ -1,0 +1,132 @@
+/* Header y texto */
+.headerPages {
+    background-color: #0e1320;
+    color: lightblue;
+    text-align: center;
+    padding: 10px 0;
+    font-family: "poppins", sans-serif;
+}
+
+.headerPages h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;;
+}
+
+.headerPages p {
+    font-size: 1.2rem;
+    margin-bottom: 10;
+    font-style: italic;
+}
+
+/* Links de redes header */
+.social-linksPages {
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 15px 0;
+}
+
+.social-linksPages a {
+    margin: 0 10px;
+    color: lightblue;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-linksPages a:hover {
+    color: white;
+}
+
+/* Para el navbar */
+.navbarPages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px 20px;
+  color: #0e1320;
+  position: relative;
+  font-family: "poppins", sans-serif;
+}
+
+/* Estilos de la nav bar */
+.nav-linksPages {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilos de la hamburguesa */
+.nav-linksPages li a {
+  color: #0e1320;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s;
+}
+
+.nav-linksPages li a:hover,
+.nav-linksPages li a.active {
+  background-color: #0e1320;
+  color: lightblue;
+  border-radius: 5px;
+}
+
+/* Login button */
+.login-buttonPages {
+  background-color:#0e1320;
+  border: none;
+  color: lightblue;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button hover effect */
+.login-buttonPages:hover {
+  background-color: #0e1380;
+  color: lightblue;
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-togglePages {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* Estilos de las lineas de la hamburguesa */
+.menu-togglePages span {
+  background: #0e1320;
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+/* Responsive*/
+@media (max-width: 768px) {
+  .menu-togglePages {
+    display: flex;
+  }
+
+  .nav-linksPages {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: lightblue;
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    display: none;
+    z-index: 10; 
+  }
+
+  .nav-linksPages.active {
+    display: flex;
+  }
+
+  .nav-linksPages li {
+    padding: 10px 0;
+  }
+}
