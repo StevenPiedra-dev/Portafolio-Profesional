@@ -1,5 +1,4 @@
 // js/footer.js
-
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.querySelector(".nav-links");
 
