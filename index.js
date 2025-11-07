@@ -1,14 +1,9 @@
-// js/footer.js
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
 
-  // 👇 Esto cierra el menú cuando haces clic en un enlace
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
+      // Animación visual para la hamburguesa
+      menuToggle.classList.toggle("open");
     });
-  });
