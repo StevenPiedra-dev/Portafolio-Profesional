@@ -43,23 +43,31 @@ header {
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  border: 2px solid #2f66ff;
+  border: 2px solid #E0FFFF;
   object-fit: cover;
+}
+
+.profile img:hover {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #3864cb;
+    object-fit: cover;
 }
 
 .profile-info h1 {
   font-size: 1.3rem;
-  color: #fff;
+  color: #E0FFFF;
 }
 
 .profile-info p {
   font-size: 0.9rem;
-  color: #ccc;
+  color: #E0FFFF;
 }
 
 .download-btn {
-  background-color: #2f66ff;
-  color: #fff;
+  background-color: #E0FFFF;
+  color: #0e1320;
   border: none;
   border-radius: 8px;
   padding: 10px 16px;
@@ -70,7 +78,7 @@ header {
 }
 
 .download-btn:hover {
-  background-color: #1e4ed8;
+  background-color: #3864cb;
 }
 
 /* === NAVBAR === */
@@ -90,7 +98,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #E0FFFF;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -98,7 +106,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #2f66ff;
+  color: #9fcaeb;
 }
 
 /* === HAMBURGUESA === */
@@ -113,7 +121,16 @@ nav ul li a:hover {
 }
 
 .menu-toggle span {
-  background: #fff;
+  background: #E0FFFF;
+  height: 3px;
+  width: 28px;
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle span:hover {
+  background: #9fcaeb;
   height: 3px;
   width: 28px;
   margin: 4px 0;

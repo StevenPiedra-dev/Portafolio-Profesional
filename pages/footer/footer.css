@@ -1,7 +1,8 @@
+/*Footer*/
 footer {
   background-color: #0e1320;
   justify-content: center;
-  color: #fff;
+  color: #E0FFFF;
   padding: 20px 20px;
   text-align: center;
   border-top: 1px solid #1c2233;
@@ -17,7 +18,7 @@ footer {
 .footer-container h2 {
   font-size: 1.3rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #E0FFFF;
 }
 
 .social-section {
@@ -30,7 +31,7 @@ footer {
 }
 
 .social-link {
-  color: #ccc;
+  color: #E0FFFF;
   text-align: center;
   justify-content: center;
   text-decoration: none;
@@ -43,7 +44,7 @@ footer {
 
 .social-link i {
   font-size: 1.4rem;
-  color: #2f66ff;
+  color: #E0FFFF;
   transition: transform 0.3s ease;
 }
 
