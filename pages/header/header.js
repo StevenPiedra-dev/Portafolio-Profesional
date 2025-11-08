@@ -1,6 +1,6 @@
 //Header
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("../../pages/header/header.html")
+  fetch("/pages/header/header.html")
     .then((res) => res.text())
     .then((data) => {
       document.body.insertAdjacentHTML("afterbegin", data);
