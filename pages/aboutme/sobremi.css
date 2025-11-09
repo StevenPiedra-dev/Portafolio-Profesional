@@ -6,7 +6,176 @@
   font-family: "Poppins", sans-serif;
 }
 
-.content {
-  background-color: #E0FFFF;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F8FF;
+    color: #0e1320;
+    line-height: 1.6;
+}
+
+/*HERO*/
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: linear-gradient(100deg, #0e1320, #1b2238);
+    color: #F0F8FF;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #F0F8FF;
+  object-fit: cover;
+}
+
+.hero h2 span {
+  color: lightblue;
+  font-size: larger;
+}
+
+.hero h3 {
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-weight: 400;
+  margin: 5px 0 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* SKILLS */
+.skills {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #F0F8FF;
+}
+
+.skills h2 {
+  font-size: 2rem;
   color: #0e1320;
+  margin: 30px;
+}
+
+.skills-category {
+  margin: 50px;
+}
+
+.skills-category h3 {
+  color:  #0e1320;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.skill {
+  background-color: #0e1320;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.skill:hover {
+  background-color: lightblue;
+  color: #0e1320;
+}
+
+/* JOURNEY */
+.journey,
+.motivation,
+.fun-facts,
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journey h2,
+.motivation h2,
+.fun-facts h2,
+.cta h2 {
+  margin-bottom: 20px;
+  color: #0e1320;
+}
+
+/* FUN FACTS */
+.fun-facts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fun-facts li {
+  margin: 8px 0;
+}
+
+/* CTA */
+.cta-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn, .btn-outline {
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn {
+  background-color: #0e1320;
+  color: white;
+}
+
+.btn:hover {
+  background-color: lightblue;
+  color: #0e1320;
+}
+
+.btn-outline {
+  border: 2px solid #0e1320;
+  color: #0e1320;
+}
+
+.btn-outline:hover {
+  background-color: #0e1320;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-content div {
+    max-width: 500px;
+    text-align: left;
+  }
 }
