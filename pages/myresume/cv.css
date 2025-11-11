@@ -1,0 +1,176 @@
+/* === ESTILO GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f8ff;
+  color: #0e1320;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.resume-section h2 {
+  border-left: 5px solid #0e1320;
+  padding-left: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tags span {
+  background: #0e1320;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.skill-bars .bar {
+  margin-bottom: 10px;
+}
+
+.bar span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.progress {
+  height: 8px;
+  background: #ccc;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #0e1320;
+  transition: width 1s ease-out;
+}
+
+.cv-download {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#downloadBtn {
+  background: #0e1320;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#downloadBtn:hover {
+  background: #14203a;
+}
+
+/* Popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-actions button {
+  margin: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#confirmDownload {
+  background: #0e1320;
+  color: white;
+}
+
+#cancelDownload {
+  background: #ddd;
+}
+
+/* Transiciones suaves para secciones */
+.resume-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.resume-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de barras */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0e1320, #4b5a94);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+/* Experiencia expandible */
+.experience-item {
+  background: #f5f8ff;
+  border-left: 4px solid #0e1320;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.experience-item:hover {
+  background: #e7f0ff;
+}
+.experience-item.expanded p {
+  color: #0e1320;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+/* Educación animada */
+#education li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+#education li.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
