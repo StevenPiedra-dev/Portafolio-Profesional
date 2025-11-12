@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -54,15 +54,108 @@
             </ul>
         </nav>
     </header>
+    <!-- WHAT I DO -->
+    <section id="what" class="section what-i-do">
+        <h2>What I Do?</h2>
+        <div class="cards">
+            <article class="card">
+                <div class="card-icon">📊</div>
+                <h3>Data Analytics</h3>
+                <p>Designing data pipelines, ETL processes, dashboards and insights for executives.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">💻</div>
+                <h3>Full-Stack Development</h3>
+                <p>Creating responsive, secure and scalable applications using React, Node.js & SQL.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🤖</div>
+                <h3>AI & Automation</h3>
+                <p>Integrating LLMs, building prototypes and automating processes with Python & APIs.</p>
+            </article>
+        </div>
+    </section>
 
-    <!--Content-->
-    <div class="content">dddddd
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    </div>
+    <!-- DATA IN ACTION -->
+    <section id="data" class="section data-action">
+        <h2>Data in Action</h2>
+
+        <!-- Contenedor que tendrá 5 gráficos (Chart.js) -->
+        <div class="charts-grid">
+            <!-- Cada chart-card es una tarjeta con un gráfico -->
+            <div class="chart-card"><canvas id="chart1"></canvas>
+                <p class="chart-label">Skill Focus</p>
+            </div>
+            <div class="chart-card"><canvas id="chart2"></canvas>
+                <p class="chart-label">Projects by Domain</p>
+            </div>
+            <div class="chart-card"><canvas id="chart3"></canvas>
+                <p class="chart-label">Professional Growth</p>
+            </div>
+            <div class="chart-card"><canvas id="chart4"></canvas>
+                <p class="chart-label">Competency Radar</p>
+            </div>
+            <div class="chart-card"><canvas id="chart5"></canvas>
+                <p class="chart-label">Success Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="section featured-projects">
+        <h2>Featured Projects</h2>
+
+        <!-- Tarjetas de proyectos -->
+        <div class="project-grid">
+            <article class="project-card">
+                <img src="assets/img/Foto.jpg" alt="Fintech Dashboard" />
+                <div class="project-info">
+                    <h3>Ejemplo 1</h3>
+                    <p>Ejemplo 1</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="assets/img/Foto.jpg" alt="AI Chat Assistant" />
+                <div class="project-info">
+                    <h3>Ejemplo 2</h3>
+                    <p>Chatbot con OpenAI API y Node.js backend.</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="assets/img/Foto.jpg" alt="E-commerce API" />
+                <div class="project-info">
+                    <h3>Ejemplo 3</h3>
+                    <p>API RESTful con Express.js, autenticación e inventario.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section achievements">
+        <h2>Achievements</h2>
+        <!-- Contador animado con tus métricas -->
+        <div class="counters">
+            <div class="counter">
+                <div class="count" data-target="10">0</div>
+                <div class="label">Projects</div>
+            </div>
+            <div class="counter">
+                <div class="count" data-target="3">0</div>
+                <div class="label">Years Experience</div>
+            </div>
+            <div class="counter">
+                <div class="count" data-target="15">0</div>
+                <div class="label">Dashboards</div>
+            </div>
+            <div class="counter">
+                <div class="count" data-target="6">0</div>
+                <div class="label">AI Prototypes</div>
+            </div>
+        </div>
+    </section>
 
     <!--Footer fijo-->
     <footer class="footer">
@@ -90,7 +183,10 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
+    <!-- Chart.js (librería para los gráficos) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </body>
 
