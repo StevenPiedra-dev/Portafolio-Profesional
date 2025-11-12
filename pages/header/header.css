@@ -65,7 +65,7 @@ header {
   color: #E0FFFF;
 }
 
-.download-btn {
+.login-btn {
   background-color: #E0FFFF;
   color: #0e1320;
   border: none;
@@ -77,15 +77,15 @@ header {
   text-decoration: none;
 }
 
-.download-btn:hover {
+.login-btn:hover {
   background-color: #3864cb;
 }
 
-.download-btn {
+.login-btn {
   position: relative;
   overflow: hidden;
 }
-.download-btn::after {
+.login-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -95,7 +95,7 @@ header {
   background: rgba(255,255,255,0.3);
   transition: left 0.4s ease;
 }
-.download-btn:hover::after {
+.login-btn:hover::after {
   left: 100%;
 }
 
