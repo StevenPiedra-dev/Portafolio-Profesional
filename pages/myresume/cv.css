@@ -7,11 +7,8 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   background-color: #f0f8ff;
   color: #0e1320;
-  margin: 0;
-  padding: 0;
 }
 
 .resume-container {
@@ -22,6 +19,14 @@ body {
 
 .resume-section {
   margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.resume-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .resume-section h2 {
@@ -31,13 +36,27 @@ body {
   margin-bottom: 1rem;
 }
 
-.skill-tags span {
-  background: #0e1320;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 5px;
+/* === HARD SKILLS CATEGORIZADAS === */
+.skill-category {
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  margin-bottom: 15px;
+  color: #0e1320;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #0e1320;
   display: inline-block;
+  padding-bottom: 5px;
 }
 
 .skill-bars .bar {
@@ -58,15 +77,180 @@ body {
   overflow: hidden;
 }
 
-.progress::after {
-  content: "";
-  position: absolute;
+.progress-fill {
   height: 100%;
-  width: 0;
-  background: #0e1320;
-  transition: width 1s ease-out;
+  background: linear-gradient(90deg, #0e1320, #4b5a94);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
 }
 
+/* === SOFT SKILLS / TAGS === */
+.skill-tags span {
+  background: #0e1320;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* === EXPERIENCIA === */
+.experience-item {
+  background: #f5f8ff;
+  border-left: 4px solid #0e1320;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.experience-item:hover {
+  background: #e7f0ff;
+}
+
+.experience-item.expanded p {
+  color: #0e1320;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+/* === EDUCACIÓN === */
+.education-modern .edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edu-item {
+  background: #fff;
+  padding: 15px;
+  border-left: 5px solid #0e1320;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.edu-item:hover {
+  transform: translateX(6px);
+}
+
+/* === REFERENCIAS === */
+.references-modern .ref-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.ref-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.ref-card:hover {
+  transform: scale(1.05);
+}
+
+.ref-card a {
+  color: #2f66ff;
+  text-decoration: none;
+}
+
+.ref-card a:hover {
+  text-decoration: underline;
+}
+
+/* === CONTACT & NETWORKS === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: #0e1320;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.contact-card a {
+  color: #0e1320;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: #2f66ff;
+}
+
+/* === LANGUAGES SECTION === */
+.languages-section {
+  margin-top: 60px;
+  padding: 20px;
+  background: #0e1320;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.languages-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00bcd4;
+}
+
+.language {
+  margin: 15px 0;
+}
+
+.language span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background: #1e2a3a;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 12px;
+  background: linear-gradient(90deg, #00bcd4, #009688);
+  width: 0;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* === BOTÓN DE DESCARGA === */
 .cv-download {
   text-align: center;
   margin-top: 3rem;
@@ -74,7 +258,7 @@ body {
 
 #downloadBtn {
   background: #0e1320;
-  color: white;
+  color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   border: none;
@@ -86,20 +270,22 @@ body {
   background: #14203a;
 }
 
-/* Popup */
+/* === POPUP CV === */
 .popup-overlay {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(4px);
 }
 
 .popup-content {
-  background: white;
+  background: #fff;
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
@@ -116,61 +302,9 @@ body {
 
 #confirmDownload {
   background: #0e1320;
-  color: white;
+  color: #fff;
 }
 
 #cancelDownload {
   background: #ddd;
 }
-
-/* Transiciones suaves para secciones */
-.resume-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-.resume-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Animación de barras */
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #0e1320, #4b5a94);
-  border-radius: 10px;
-  transition: width 1s ease-in-out;
-}
-
-/* Experiencia expandible */
-.experience-item {
-  background: #f5f8ff;
-  border-left: 4px solid #0e1320;
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.experience-item:hover {
-  background: #e7f0ff;
-}
-.experience-item.expanded p {
-  color: #0e1320;
-  font-weight: 500;
-  transition: 0.4s;
-}
-
-/* Educación animada */
-#education li {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.5s ease;
-}
-#education li.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-

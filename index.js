@@ -1,18 +1,24 @@
-//Header
+// =============================
+// NAVBAR Y MENÚ RESPONSIVE
+// =============================
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
+// Alterna la visibilidad del menú en móviles
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
-  // Animación visual para la hamburguesa
-  menuToggle.classList.toggle("open");
+  menuToggle.classList.toggle("open"); // animación del icono hamburguesa
 });
 
+// =============================
+// ANIMACIONES AL SCROLLEAR
+// =============================
 document.addEventListener("DOMContentLoaded", () => {
-  // Animate cards and charts when visible
+  // Elementos que aparecerán con animación al hacer scroll
   const appearEls = document.querySelectorAll(
     ".card, .chart-card, .project-card"
   );
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -21,10 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { threshold: 0.15 }
   );
+
   appearEls.forEach((el) => observer.observe(el));
 
-  // Counter animation
+  // =============================
+  // CONTADOR ANIMADO (Achievements)
+  // =============================
   const counters = document.querySelectorAll(".count");
+
   const counterObs = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -32,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const el = entry.target;
           const goal = +el.dataset.target;
           let current = 0;
-          const step = goal / 40;
+          const step = goal / 40; // velocidad del conteo
+
           const interval = setInterval(() => {
             current += step;
             el.textContent = Math.floor(current);
@@ -41,15 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
               clearInterval(interval);
             }
           }, 30);
-          counterObs.unobserve(el);
+
+          counterObs.unobserve(el); // evita reiniciar el conteo al hacer scroll nuevamente
         }
       });
     },
     { threshold: 0.6 }
   );
+
   counters.forEach((c) => counterObs.observe(c));
 
-  // Chart.js visualizations
+  // =============================
+  // GRÁFICOS (Chart.js)
+  // =============================
+
+  //Distribución de habilidades
   new Chart(document.getElementById("chart1"), {
     type: "doughnut",
     data: {
@@ -61,24 +78,34 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    options: { plugins: { legend: { position: "bottom" } } },
+    options: {
+      plugins: { legend: { position: "bottom" } },
+    },
   });
 
+  // Proyectos por categoría
   new Chart(document.getElementById("chart2"), {
     type: "bar",
     data: {
       labels: ["Fintech", "Automation", "Data", "Web Apps", "IA"],
       datasets: [
-        { label: "Projects", data: [5, 8, 6, 4, 1], backgroundColor: "#1b2238"},
+        {
+          label: "Projects",
+          data: [5, 8, 6, 4, 1],
+          backgroundColor: "#1b2238",
+        },
       ],
     },
-    options: { scales: { y: { beginAtZero: true } } },
+    options: {
+      scales: { y: { beginAtZero: true } },
+    },
   });
 
+  //Evolución de habilidades
   new Chart(document.getElementById("chart3"), {
     type: "line",
     data: {
-      labels: ["2020","2021", "2022", "2023", "2024", "2025"],
+      labels: ["2020", "2021", "2022", "2023", "2024", "2025"],
       datasets: [
         {
           label: "Skill Level",
@@ -90,9 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    options: { plugins: { legend: { display: false } } },
+    options: {
+      plugins: { legend: { display: false } },
+    },
   });
 
+  //Competencias técnicas
   new Chart(document.getElementById("chart4"), {
     type: "radar",
     data: {
@@ -106,15 +136,25 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ],
     },
-    options: { elements: { line: { borderWidth: 2 } } },
+    options: {
+      elements: { line: { borderWidth: 2 } },
+    },
   });
 
+  //Éxito de proyectos
   new Chart(document.getElementById("chart5"), {
     type: "doughnut",
     data: {
       labels: ["Successful Projects", "Iterations"],
-      datasets: [{ data: [1, 1], backgroundColor: ["#1b2238", "#dfe8ff"] }],
+      datasets: [
+        {
+          data: [1, 1],
+          backgroundColor: ["#1b2238", "#dfe8ff"],
+        },
+      ],
     },
-    options: { plugins: { legend: { position: "bottom" } } },
+    options: {
+      plugins: { legend: { position: "bottom" } },
+    },
   });
 });
